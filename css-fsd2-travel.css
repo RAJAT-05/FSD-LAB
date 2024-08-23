@@ -1,0 +1,173 @@
+/* 2) Transport modes in Pune css */
+
+
+:root{
+    --font1: "Righteous", sans-serif;
+    --font2: "Alumni Sans Pinstripe", sans-serif;
+    --font3: "Josefin Slab", serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--font3);
+    background-color: #fdffb6;
+}
+
+.header {
+    padding: .5rem 3rem;
+    width: 100vw;
+    height: 15vh;
+    color: white;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    width: 45%;
+}
+.nav ul{
+    font-family: var(--font1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+
+nav ul li {
+    display: inline;
+} 
+    */
+
+
+.nav li{
+    list-style-type: none;
+    font-size: 18px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 0px;
+    cursor: pointer;
+    color: white;
+    font-family: "Almendra", serif;
+}
+
+.home{
+    width: 100vw;
+    height: 80vh;
+    padding: 20px;
+}
+.home .content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home .content h1{
+    font-size: 45px;
+    font-weight: 600;
+    color: #ce4545;
+}
+.home .content p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #eb9b9b;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    height: 100vh;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#home {
+    background-color: #ffeaa7;
+}
+
+#about {
+    background-color: #fab1a0;
+}
+
+#car {
+    background-color: #74b9ff;
+}
+
+#auto {
+    background-color: #ff7675;
+}
+
+#bus {
+    background-color: #fdcb6e;
+}
+
+#metro {
+    background-color: #81ecec;
+}
+
+#train {
+    background-color: #a29bfe;
+}
+
+
+/* Footer */
+footer {
+    bottom: 0;
+    padding: 20px;
+    width: 100vw;
+    height: 30vh;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font1);
+}
+
+.icons {
+    height: 10vh;
+    padding: 5px 0;
+    gap: 10px;
+    /* margin: 20px; */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    padding: 5px;
+    color: white;
+    /* text-align: center; */
+}
+
+footer p {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 10px;
+    line-height: 2px;
+
+}
+
+/* end footer */

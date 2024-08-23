@@ -1,0 +1,341 @@
+/*  fsd Task 4:- Hotels/restaurants in Pune */
+
+:root {
+    --color1: ;
+    --color2: ;
+    --color3: ;
+    --color4: ;
+    --font-main: "Afacad", sans-serif;
+    --font-header: "Merienda", cursive;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+    color: #fff;
+}
+
+html {
+    font-size: 62%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    /* background-image: radial-gradient(circle, #ffffff, #e5e3ee, #ccc8dd, #b3aecc, #9b94bb, #8d87ad, #7f7a9f, #726d91, #6c6883, #666375, #5f5e67, #595959); */
+    background-image: linear-gradient(to left, #ffffff, #e5e3ee, #ccc8dd, #b3aecc, #9b94bb, #8d87ad, #7f7a9f, #726d91, #6c6883, #666375, #5f5e67, #595959);
+}
+
+section {
+    font-family: "Afacad", sans-serif;
+}
+
+header {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to left top, #ffffff, #e5e3ee, #ccc8dd, #b3aecc, #9b94bb, #8d87ad, #7f7a9f, #726d91, #6c6883, #666375, #5f5e67, #595959);
+    border-bottom: 1px solid white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo-icon {
+    margin: -10px 0 -20px 30px;
+    height: 70px;
+    width: auto;
+
+}
+
+header .logo {
+    font-size: 32px;
+    color: #c7c7c700;
+    -webkit-text-stroke: 1px #ffffff;
+    font-weight: bolder;
+    font-family: var(--font-header);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    font-family: var(--font-main);
+}
+
+header .navbar a:hover {
+    color: #000000;
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--color1);
+}
+
+.home {
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    background: url(assets/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.home .content {
+    max-width: 100%;
+    background-image: linear-gradient(to left top, #ffffff77, #e5e3ee77, #ccc8dd77, #b3aecc77, #9b94bb77, #8d87ad77, #7f7a9f77, #726d9177, #6c688377, #66637577, #5f5e6777, #59595977);
+    color: #fff;
+    padding: 30px 30px 30px 30px;
+    margin: auto 10rem;
+    border-radius: 0 32px;
+
+}
+
+.home .content h1 {
+    font-size: 68px;
+    max-width: 600px;
+    line-height: 44px;
+}
+
+.home .content span {
+    font-size: 30px;
+    margin: -20px 20px 20px 10px;
+}
+
+.home .content p {
+    font-size: 18px;
+    /* padding: 20px; */
+    margin: 20px;
+    max-width: 350px;
+    line-height: 14px;
+}
+
+.btn {
+    /* display: inline-block; */
+    margin-top: 1rem;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 18px;
+    padding: 5px 10px;
+    margin: 15px 15px 65px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content a:hover {
+    background: #00000075;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+/* about */
+.about {
+    /* background-image: radial-gradient(circle, #a3a1b3, #9c99ae, #9491aa, #8d89a5, #8681a0, #807b98, #797591, #736f89, #6c697d, #666471, #5f5e65, #595959); */
+    background-image: radial-gradient(circle, #bbb9c6, #b3b0bf, #aba8b9, #a39fb2, #9b97ac, #938fa3, #8a879a, #827f91, #787583, #6d6c74, #636267, #595959);
+}
+
+.heading {
+    background-image: linear-gradient(to top, #9691ae, #8984a2, #7d7896, #716c8a, #65607e, #5e5875, #56516c, #4f4963, #49445a, #443e52, #3e3949, #383441);
+    text-align: center;
+    font-size: 4.6rem;
+    color: #ffffff;
+    border-top: 2px solid white;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+
+}
+
+.about .content {
+    padding: 2rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* text-align: center; */
+    flex-flow: row wrap;
+    /* grid-auto-flow: row dense; */
+}
+
+.about .info-content p {
+    font-size: 6rem;
+    font-weight: bolder;
+    line-height: 5rem;
+    /* text-align: start; */
+    padding: 2rem 2rem 0px 2rem;
+    margin: 2rem;
+}
+.about #content2 p{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .info-content ul {
+    font-size: 2rem;
+    padding: 1rem 2rem 0 4rem;
+    margin: 2rem 2rem 0 2rem ;
+}
+
+.about img {
+    height: 45rem;
+    margin: 4rem 2rem;
+    box-shadow: .5rem .5rem 1rem .1rem black;
+    border-radius: 0.8rem;
+}
+.about .content .info-content #button2{
+    margin: -2rem 0 0 35rem;
+}
+.about .content .info-content #button3{
+    margin: -2rem 0 0 45rem;
+}
+
+/* Hotel section */
+
+
+.hotel{
+    background-image: linear-gradient(to left, #c9c6d3, #bfbbcc, #b5b0c6, #aba6bf, #a19bb9, #9892b1, #908aa9, #8781a1, #7e7896, #75708a, #6c677f, #635f74);
+/* Applied for all 3 card -> parent (hotels, homestays, budget-hotels)*/
+
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #070707;
+    padding: 0.6rem;
+    background: #cfcfcf;
+    /* box-shadow: 1rem 0 1rem .1rem black; */
+
+}
+
+.card-parent {
+    padding: 3rem;
+    margin: 20px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.card-child {
+    display: inline-block;
+    width: 28rem;
+    height: 40rem;
+    border: 2px solid #ffffff;
+    /* background-image: linear-gradient(to left top, #acacac, #a3a1ab, #9a96a9, #908ca8, #8781a6, #807a9f, #797498, #726d91, #6c6883, #666375, #5f5e67, #595959); */
+    background-image: linear-gradient(to left top, #8a83a6, #8780a6, #857da6, #827aa5, #7f77a5, #756e9a, #6c648e, #625b83, #504a6b, #3e3954, #2d293e, #1d1a29);
+    /* background-color: #000000; */
+    border-radius: 0 2.8rem;
+    margin: 2rem;
+    box-shadow: -.4rem .5rem 1rem .1rem black;
+}
+
+.card-photo {
+    height: 55%;
+    width: 100%;
+    border-radius: 0 28px;
+    border-bottom: 2px solid #fff;
+    object-fit: cover;
+}
+
+.card-name {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 2.6rem;
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+}
+
+.card-child p {
+    margin: 0.5rem 1rem;
+    padding: 0 1rem;
+    font-size: 14px;
+    height: 5rem;
+    width: auto;
+    text-wrap: wrap;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.hotel .price {
+    padding: 5px;
+    margin: .5rem 2rem 1.5rem 2rem;
+    font-size: 20px;
+    width: max-content;
+    height: min-content;
+    border: 1px solid white;
+    /* line-height: 1rem; */
+}
+
+.btn2 {
+    /* display: inline-block; */
+    /* margin-top: 1rem; */
+    color: #ffffff;
+    /* background-color: ; */
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    padding: .4rem 0.8rem;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn2:hover {
+    background: #ffffffc9;
+    color: #000000;
+    border: 1px solid #ffffff;
+}
+
+
+/* Footer */
+footer {
+    font-family: var(--font-main);
+    padding: 3rem;
+    width: 100%;
+    height: 30vh;
+    bottom: 0;
+    border-top: 2px solid white;
+    background-image: linear-gradient(to right bottom, #e1e0e7, #cbc9d6, #b5b1c6, #9f9bb5, #8a85a5, #7c7797, #6f6989, #625c7c, #59546d, #4f4b5f, #464351, #3d3b44);    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons {
+    height: 10vh;
+    padding: 1rem;
+    /* margin: 20px; */
+    font-size: 2.4rem;
+    display: inline;
+}
+
+footer a {
+    padding: 0.5rem;
+    /* text-align: center; */
+}
+
+footer p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    line-height: 1rem;
+}
+
+/* end footer */
