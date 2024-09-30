@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Page</title>
+    <link rel="stylesheet" href="dig.css">
+</head>
+<body>
+    <header>
+        <h1 id="header">Welcome to My Web Page</h1>
+    </header>
+    <main>
+        <p class="description">This is a paragraph with some <span class="highlight">highlighted text</span>.</p>
+        <div class="button-container">
+            <button id="changeTextButton" class="action-button">Change Text</button>
+            <button id="changeImageButton" class="action-button">Change Image</button>
+            <button id="addTextButton" class="action-button">Add Text</button>
+            <button id="deleteNodeButton" class="action-button">Delete Last Added Text</button>
+        </div>
+        <div id="imageContainer">
+            <img id="dynamicImage" src="image.jpeg" alt="Placeholder Image">
+        </div>
+        <div id="textContainer"></div>
+    </main>
+
+    <script src="jav.js"></script>
+</body>
+</html>
