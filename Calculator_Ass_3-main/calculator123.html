@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #666;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculator</h1>
+
+        <label for="fno">First Number:</label>
+        <input type="text" id="fno" name="fno" required>
+
+        <label for="sno">Second Number:</label>
+        <input type="text" id="sno" name="sno" required>
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" name="result" readonly value="0">
+
+        <div class="buttons">
+            <button onclick="calculate('add')">ADDITION</button>
+            <button onclick="calculate('subtract')">SUBTRACTION</button>
+            <button onclick="calculate('multiply')">MULTIPLICATION</button>
+            <button onclick="calculate('divide')">DIVISION</button>
+            <button onclick="clearFields()">CLEAR</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function calculate(operation) {
+            // Retrieve input values
+            var num1 = parseFloat(document.getElementById('fno').value);
+            var num2 = parseFloat(document.getElementById('sno').value);
+            var result;
+
+            // Check if inputs are valid numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                result = 'Error: Invalid input';
+            } else {
+                // Perform calculation based on selected operation
+                switch (operation) {
+                    case 'add':
+                        result = num1 + num2;
+                        break;
+                    case 'subtract':
+                        result = num1 - num2;
+                        break;
+                    case 'multiply':
+                        result = num1 * num2;
+                        break;
+                    case 'divide':
+                        if (num2 !== 0) {
+                            result = num1 / num2;
+                        } else {
+                            result = 'Error: Division by zero';
+                        }
+                        break;
+                    default:
+                        result = 'Invalid operation';
+                }
+            }
+
+            // Display result in the result input box
+            document.getElementById('result').value = result;
+        }
+
+        // Function to clear input and result fields
+        function clearFields() {
+            document.getElementById('fno').value = '';
+            document.getElementById('sno').value = '';
+            document.getElementById('result').value = '0';
+        }
+    </script>
+</body>
+</html>
