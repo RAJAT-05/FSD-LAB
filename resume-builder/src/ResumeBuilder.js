@@ -1,5 +1,3 @@
-// src/ResumeBuilder.js
-
 import React, { useState } from "react";
 import "./ResumeBuilder.css";
 
@@ -13,7 +11,6 @@ function ResumeBuilder() {
     achievements: "",
   });
 
-  const [submittedData, setSubmittedData] = useState(null); // State to hold submitted data
   const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
@@ -23,9 +20,24 @@ function ResumeBuilder() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSuccess("Resume submitted successfully!");
-    setSubmittedData(data); // Save the submitted data
 
-    // Reset form fields if needed
+    // Generate the HTML for the submitted data
+    const output = `
+      <div class="submitted-resume">
+        <h3>Submitted Resume</h3>
+        <p><strong>Professional Summary:</strong> ${data.summary}</p>
+        <p><strong>Education Qualifications:</strong> ${data.education}</p>
+        <p><strong>Skills:</strong> ${data.skills}</p>
+        <p><strong>Career Objective:</strong> ${data.objective}</p>
+        <p><strong>Experience and Internships:</strong> ${data.experience}</p>
+        <p><strong>Skills and Achievements:</strong> ${data.achievements}</p>
+      </div>
+    `;
+
+    // Append the generated HTML at the bottom using document.write()
+    document.body.innerHTML += output;
+
+    // Reset form fields after submission
     setData({
       summary: "",
       education: "",
@@ -103,19 +115,6 @@ function ResumeBuilder() {
         <button type="submit">Submit</button>
         {success && <p className="success">{success}</p>}
       </form>
-
-      {/* Displaying the submitted resume information */}
-      {submittedData && (
-        <div className="submitted-resume">
-          <h3>Submitted Resume</h3>
-          <p><strong>Professional Summary:</strong> {submittedData.summary}</p>
-          <p><strong>Education Qualifications:</strong> {submittedData.education}</p>
-          <p><strong>Skills:</strong> {submittedData.skills}</p>
-          <p><strong>Career Objective:</strong> {submittedData.objective}</p>
-          <p><strong>Experience and Internships:</strong> {submittedData.experience}</p>
-          <p><strong>Skills and Achievements:</strong> {submittedData.achievements}</p>
-        </div>
-      )}
     </div>
   );
 }
