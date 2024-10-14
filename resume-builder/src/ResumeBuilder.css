@@ -1,0 +1,74 @@
+/* src/ResumeBuilder.css */
+
+.resume-builder {
+  background: #f9f9f9; /* Light background for the resume section */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6a11cb; /* Darker color for the heading */
+  text-align: center; /* Center align the heading */
+}
+
+form {
+  display: grid; /* Use grid layout for alignment */
+  grid-template-columns: 1fr 2fr; /* Two columns: label and input */
+  gap: 15px; /* Space between grid items */
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #444; /* Darker label text */
+  align-self: center; /* Center the label vertically */
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%; /* Full width for inputs */
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #6a11cb; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5); /* Subtle glow effect */
+  outline: none; /* Remove outline */
+}
+
+button {
+  grid-column: 2; /* Place the button in the second column */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a11cb; /* Button color */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #2575fc; /* Change color on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.success {
+  margin-top: 10px;
+  color: #28a745; /* Success message color */
+  font-weight: bold;
+  text-align: center; /* Center the success message */
+  grid-column: span 2; /* Center the success message across both columns */
+}
